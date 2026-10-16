@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motu Patlu Topup</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #071526;
+    color: white;
+}
+
+header {
+    background: #102b45;
+    padding: 18px;
+    text-align: center;
+    border-bottom: 2px solid #f5b335;
+}
+
+header h1 {
+    margin: 0;
+    color: #ffc857;
+    font-size: 25px;
+}
+
+header p {
+    margin-bottom: 0;
+    color: #ccc;
+}
+
+.banner {
+    margin: 15px;
+    padding: 25px 15px;
+    text-align: center;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #174a70, #101b36);
+}
+
+.banner h2 {
+    color: #ffd166;
+    font-size: 27px;
+}
+
+.banner p {
+    color: #ddd;
+}
+
+.container {
+    padding: 15px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.section-title {
+    color: #ffc857;
+    margin-top: 30px;
+    border-bottom: 1px solid #284761;
+    padding-bottom: 10px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.card {
+    background: #102b45;
+    border: 1px solid #294966;
+    border-radius: 13px;
+    padding: 15px 10px;
+    text-align: center;
+}
+
+.card .icon {
+    font-size: 35px;
+}
+
+.card h3 {
+    font-size: 16px;
+}
+
+.card p {
+    color: #b9c9d8;
+    font-size: 13px;
+}
+
+.price {
+    color: #ffd166;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+button {
+    background: #ffbd45;
+    color: #17202a;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buy {
+    width: 100%;
+}
+
+.payment, .order-box {
+    margin-top: 20px;
+    padding: 18px;
+    background: #102b45;
+    border-radius: 13px;
+    border: 1px solid #294966;
+}
+
+.payment h3, .order-box h3 {
+    color: #ffd166;
+}
+
+.number {
+    font-size: 23px;
+    font-weight: bold;
+    color: #ffd166;
+    text-align: center;
+    padding: 12px 0;
+}
+
+label {
+    display: block;
+    margin: 12px 0 6px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #45627b;
+    background: #071526;
+    color: white;
+    font-size: 15px;
+}
+
+.submit {
+    width: 100%;
+    margin-top: 18px;
+    font-size: 16px;
+}
+
+.notice {
+    color: #bdccda;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 10px;
+    color: #aab8c6;
+    font-size: 12px;
+}
+
+@media (min-width: 650px) {
+    .products {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>💎 Motu Patlu Topup</h1>
+    <p>Gaming Diamond & Membership Store</p>
+</header>
+
+<section class="banner">
+    <h2>Welcome to Motu Patlu Topup</h2>
+    <p>আপনার পছন্দের প্যাকেজ বেছে নিন</p>
+    <button onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})">
+        প্যাকেজ দেখুন
+    </button>
+</section>
+
+<main class="container">
+
+<h2 class="section-title" id="packages">🔥 Special Offers</h2>
+
+<div class="products">
+
+    <div class="card">
+        <div class="icon">🔥</div>
+        <h3>Weekly Offer × 3</h3>
+        <p>৩টি Weekly প্যাকেজ</p>
+        <p>মেয়াদ: ৭ দিন</p>
+        <div class="price">৳ 300</div>
+        <button class="buy" onclick="selectPackage('Weekly Offer × 3', 300)">
+            অর্ডার করুন
+        </button>
+    </div>
+
+    <div class="card">
+        <div class="icon">🌟</div>
+        <h3>Monthly Offer × 3</h3>
+        <p>৩টি Monthly প্যাকেজ</p>
+        <p>মেয়াদ: ৩০ দিন</p>
+        <div class="price">৳ 1,000</div>
+        <button class="buy" onclick="selectPackage('Monthly Offer × 3', 1000)">
+            অর্ডার করুন
+        </button>
+    </div>
+
+</div>
+
+<h2 class="section-title">💎 Cutting Diamond</h2>
+
+<div class="products">
+
+    <div class="card">
+        <div class="icon">💎</div>
+        <h3>5,000 Diamonds</h3>
+        <p>Cutting Diamond Package</p>
+        <div class="price">৳ 500</div>
+        <button class="buy" onclick="selectPackage('5000 Diamonds', 500)">
+            অর্ডার করুন
+        </button>
+    </div>
+
+    <div class="card">
+        <div class="icon">💎</div>
+        <h3>10,000 Diamonds</h3>
+        <p>Cutting Diamond Package</p>
+        <div class="price">৳ 1,000</div>
+        <button class="buy" onclick="selectPackage('10000 Diamonds', 1000)">
+            অর্ডার করুন
+        </button>
+    </div>
+
+</div>
+
+<h2 class="section-title">🎮 Diamond Packages</h2>
+
+<div class="products" id="diamondProducts"></div>
+
+<h2 class="section-title" id="payment">💳 Payment Method</h2>
+
+<div class="payment">
+    <h3>বিকাশ / নগদ</h3>
+    <p>পেমেন্ট নম্বর:</p>
+
+    <div class="number">01997731007</div>
+
+    <button onclick="copyNumber()">নম্বর কপি করুন</button>
+
+    <p class="notice">
+        পেমেন্ট করার আগে নম্বর ও প্রাপকের নাম যাচাই করুন।
+        এই ওয়েবসাইটে এখনো সরাসরি বা স্বয়ংক্রিয় পেমেন্ট চালু নেই।
+    </p>
+</div>
+
+<div class="order-box" id="order">
+    <h3>📦 অর্ডার ফর্ম</h3>
+
+    <form id="orderForm">
+
+        <label>আপনার প্যাকেজ</label>
+        <input id="package" required readonly
+        placeholder="আগে একটি প্যাকেজ নির্বাচন করুন">
+
+        <label>Player ID</label>
+        <input id="playerId" placeholder="আপনার Player ID">
+
+        <label>আপনার মোবাইল নম্বর</label>
+        <input id="phone" type="tel" required
+        placeholder="01XXXXXXXXX">
+
+        <label>Transaction ID</label>
+        <input id="trx" placeholder="পেমেন্টের পর Transaction ID">
+
+        <button type="submit" class="submit">
+            অর্ডার কনফার্ম করুন
+        </button>
+
+    </form>
+
+    <p class="notice">
+        এটি একটি ডেমো অর্ডার ফর্ম। অর্ডারটি স্বয়ংক্রিয়ভাবে
+        বিক্রেতার কাছে পাঠাতে সার্ভার বা ব্যাকএন্ড লাগবে।
+    </p>
+
+    <div id="result"></div>
+</div>
+
+</main>
+
+<footer>
+    © 2026 Motu Patlu Topup<br>
+    Demo Website
+</footer>
+
+<script>
+const diamondPackages = [
+    [25, "দাম নিশ্চিত করুন"],
+    [50, "দাম নিশ্চিত করুন"],
+    [100, "দাম নিশ্চিত করুন"],
+    [115, "দাম নিশ্চিত করুন"],
+    [240, "দাম নিশ্চিত করুন"],
+    [355, "দাম নিশ্চিত করুন"],
+    [480, "দাম নিশ্চিত করুন"],
+    [505, "দাম নিশ্চিত করুন"],
+    [610, "দাম নিশ্চিত করুন"],
+    [850, "দাম নিশ্চিত করুন"],
+    [1090, "দাম নিশ্চিত করুন"],
+    [1240, "দাম নিশ্চিত করুন"],
+    [2530, "দাম নিশ্চিত করুন"],
+    [5060, "দাম নিশ্চিত করুন"]
+];
+
+const diamondContainer =
+    document.getElementById("diamondProducts");
+
+diamondPackages.forEach(function(item) {
+    const card = document.createElement("div");
+    card.className = "card";
+
+    card.innerHTML = `
+        <div class="icon">💎</div>
+        <h3>${item[0]} Diamonds</h3>
+        <p>Free Fire Diamond</p>
+        <div class="price">${item[1]}</div>
+        <button class="buy">দাম নিশ্চিত করুন</button>
+    `;
+
+    diamondContainer.appendChild(card);
+});
+
+function selectPackage(name, price) {
+    document.getElementById("package").value =
+        name + " — ৳" + price;
+
+    document.getElementById("order")
+        .scrollIntoView({behavior: "smooth"});
+
+    document.getElementById("result").innerHTML = "";
+}
+
+function copyNumber() {
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText("01997731007")
+            .then(function() {
+                alert("পেমেন্ট নম্বর কপি হয়েছে!");
+            })
+            .catch(function() {
+                alert("পেমেন্ট নম্বর: 01997731007");
+            });
+    } else {
+        alert("পেমেন্ট নম্বর: 01997731007");
+    }
+}
+
+document.getElementById("orderForm")
+.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const order = {
+        package: document.getElementById("package").value,
+        playerId: document.getElementById("playerId").value,
+        phone: document.getElementById("phone").value,
+        trx: document.getElementById("trx").value
+    };
+
+    document.getElementById("result").innerHTML = `
+        <h3>অর্ডারের বিবরণ</h3>
+        <p>প্যাকেজ: ${escapeHTML(order.package)}</p>
+        <p>Player ID: ${escapeHTML(order.playerId || "দেওয়া হয়নি")}</p>
+        <p>মোবাইল: ${escapeHTML(order.phone)}</p>
+        <p>Transaction ID: ${escapeHTML(order.trx || "দেওয়া হয়নি")}</p>
+        <p class="notice">
+            এটি শুধু আপনার স্ক্রিনে দেখানো ডেমো।
+            অর্ডারটি বিক্রেতার কাছে পাঠানো হয়নি।
+        </p>
+    `;
+});
+
+function escapeHTML(value) {
+    return String(value).replace(/[&<>"']/g, function(char) {
+        return {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#039;"
+        }[char];
+    });
+}
+</script>
+
+</body>
+</html>
